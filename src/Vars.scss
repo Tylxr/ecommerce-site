@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('~assets/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('~assets/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+$fontsize-large: 20px;
+$fontsize-regular: 15px;
+$fontsize-small: 10px;
+
+$standard-spacing: 15px;
+
+$fontfamily: 'OpenSans-Light';
+$fontfamily-bold: 'OpenSans-SemiBold';
+
+$color-grey: '#ccc';
+$colour-highlight: '#f5a742';

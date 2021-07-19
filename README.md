@@ -2,3 +2,5 @@
 React-powered E-Commerce SPA with Redux.
 
 A small, single-page E-Commerce product page built with React and Redux.
+
+Product Photography credit goes to [Mathilde Langevin.](https://unsplash.com/@mathildelangevin)
