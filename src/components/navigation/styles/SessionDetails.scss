@@ -1,0 +1,50 @@
+@import '../../../Vars.scss';
+
+.session-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+    .detail-container {
+        position: relative;
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        .badge {
+            display: none;
+        }
+
+        &.show {
+            background: #ececec;
+            cursor: pointer;
+
+            &:hover {
+                background: #dcdcdc;
+            }
+
+            .badge {
+                display: flex;
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                height: 17px;
+                width: 17px;
+                background-color: $colour-highlight;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+    
+                span {
+                    font-size: $fontsize-small;
+                }
+            }
+        }
+    }
+}

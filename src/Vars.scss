@@ -8,6 +8,11 @@
     src: url('~assets/OpenSans-SemiBold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'DancingScript';
+    src: url('~assets/DancingScript.ttf') format('truetype');
+}
+
 $fontsize-large: 20px;
 $fontsize-regular: 15px;
 $fontsize-small: 10px;
@@ -16,6 +21,13 @@ $standard-spacing: 15px;
 
 $fontfamily: 'OpenSans-Light';
 $fontfamily-bold: 'OpenSans-SemiBold';
+$fontfamily-fancy: 'DancingScript';
 
-$color-grey: '#ccc';
-$colour-highlight: '#f5a742';
+$color-grey: #ccc;
+$colour-highlight: #f29822;
+
+$page-width: 1200px;
+
+* {
+    font-family: 'OpenSans-Light';
+}

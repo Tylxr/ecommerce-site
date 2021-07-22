@@ -1,0 +1,19 @@
+@import '../../../Vars.scss';
+
+.page-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 30px;
+    
+    span {
+        margin-right: 40px;
+        font-size: $fontsize-regular;
+        font-family: $fontfamily-bold;
+
+        &:hover {
+            cursor: pointer;
+            color: #717171;
+        }
+    }
+}
