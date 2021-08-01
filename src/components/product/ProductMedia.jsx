@@ -13,17 +13,5 @@ export default function ProductMedia() {
                 <RecentlyViewed />
             </div>
         </div>
-        // <div className="product-media">
-        //     <Row>
-        //         <Col>
-        //             <ImageSlider />
-        //         </Col>
-        //     </Row>
-        //     <Row>
-        //         <Col xl={12}>
-        //             <p>This is the recently viewed section.</p>
-        //         </Col>
-        //     </Row>
-        // </div>
     )
 }
