@@ -6,12 +6,13 @@
 
     .product-media {
         flex: 1;
-        padding-right: $standard-spacing;
-        margin-left: $standard-spacing;
+        box-sizing: border-box;
+        margin: 0 $standard-spacing;
     }
 
     .product-info {
         flex: 1;
-        margin-left: $standard-spacing;
+        box-sizing: border-box;
+        margin: 0 $standard-spacing;
     }
 }

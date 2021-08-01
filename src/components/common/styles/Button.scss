@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 15px 10px 0;
+    margin: $standard-spacing $standard-spacing $standard-spacing 0;
     border: 2px solid black;
 
     &.dark {
@@ -18,7 +18,7 @@
 
     span {
         text-align: center;
-        padding: 14px 28px;
+        padding: $standard-spacing 28px;
         font-family: $fontfamily-bold;
         font-size: 18px;
     }

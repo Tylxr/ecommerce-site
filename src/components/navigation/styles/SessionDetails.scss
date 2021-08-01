@@ -9,7 +9,7 @@
 
     .detail-container {
         position: relative;
-        margin-left: 10px;
+        margin-left: $standard-spacing;
         width: 32px;
         height: 32px;
         display: flex;
@@ -27,11 +27,11 @@
         }
 
         &.show {
-            background: #ececec;
+            background: $colour-grey;
             cursor: pointer;
 
             &:hover {
-                background: #dcdcdc;
+                background: $colour-grey-lighter;
             }
 
             .badge {
@@ -47,7 +47,7 @@
                 border-radius: 50%;
     
                 span {
-                    font-size: $fontsize-small;
+                    font-size: $fontsize-tiny;
                 }
             }
         }

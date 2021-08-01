@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { ImageSlider } from '../common';
+import { RecentlyViewed } from '.';
 import './styles/ProductMedia';
 
 export default function ProductMedia() {
@@ -10,7 +10,7 @@ export default function ProductMedia() {
                 <ImageSlider />
             </div>
             <div className="recently-viewed-container">
-                <span>This is the recently viewed section.</span>
+                <RecentlyViewed />
             </div>
         </div>
         // <div className="product-media">

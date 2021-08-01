@@ -14,6 +14,7 @@ export default function ProductInfo() {
                 </div>
             </div>
             <p className="description">A power-packed serum for youthful, bright skin. It delivers a highly concentrated dose of moisturising elements, beautifully restoring your skin’s bright glow and youthful vitality.</p>
+            <p className="description">The amped-up gel-cream texture feels both weightless and replenishing. It soothes and renews skin, and helps smooth out the look of lines. Leaves skin soft, smooth and bursting with bright radiance.</p>
             <span className="price">£38.99</span>
             <div className="review-container">
                 <Rating value={3.5} />

@@ -7,10 +7,10 @@
         justify-content: space-between;
         h3 {
             font-family: $fontfamily-bold;
-            font-size: 35px;
+            font-size: 27px;
         }
         .favourite-button {
-            background: #ececec;
+            background: $colour-grey;
             height: 32px;
             width: 32px;
             border-radius: 50%;
@@ -20,7 +20,7 @@
 
             &:hover {
                 cursor: pointer;
-                background: #dcdcdc;
+                background: $colour-grey-lighter;
             }
 
             &.favourited {
@@ -38,10 +38,10 @@
     .review-container {
         display: flex;
         flex-direction: row;
-        font-size: 13px;
+        font-size: $fontsize-small;
 
         a.reviews {
-            margin-left: 15px;
+            margin-left: $standard-spacing;
             color: black;
             font-family: $fontfamily-bold;
             &:hover {
@@ -51,15 +51,15 @@
     }
     p.disclaimer {
         margin: 5px 0 0 0;
-        font-size: 12px;
+        font-size: $fontsize-small;
     }
     .buttons-container {
         display: flex;
         flex-direction: row;
-        margin: 15px 0;
+        margin: $standard-spacing 0;
     }
     .details-container {
-        font-size: 12px;
+        font-size: $fontsize-small;
 
         a {
             display: block;
