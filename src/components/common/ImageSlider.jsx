@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
 import {productOneAsArray} from 'assets/images/products/1';
 import './styles/ImageSlider';
 
