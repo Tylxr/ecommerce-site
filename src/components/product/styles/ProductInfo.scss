@@ -1,0 +1,70 @@
+@import '../../../Vars.scss';
+
+.product-info {
+    .product-heading-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        h3 {
+            font-family: $fontfamily-bold;
+            font-size: 35px;
+        }
+        .favourite-button {
+            background: #ececec;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                cursor: pointer;
+                background: #dcdcdc;
+            }
+
+            &.favourited {
+                color: #de4765;
+            }
+        }
+    }
+    .description {
+        font-size: $fontsize-regular;
+    }
+    .price {
+        font-size: $fontsize-large;
+        font-family: $fontfamily-bold;
+    }
+    .review-container {
+        display: flex;
+        flex-direction: row;
+        font-size: 13px;
+
+        a.reviews {
+            margin-left: 15px;
+            color: black;
+            font-family: $fontfamily-bold;
+            &:hover {
+                color: $colour-highlight;
+            }
+        }
+    }
+    p.disclaimer {
+        margin: 5px 0 0 0;
+        font-size: 12px;
+    }
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        margin: 15px 0;
+    }
+    .details-container {
+        font-size: 12px;
+
+        a {
+            display: block;
+            color: black;
+        }
+
+    }
+}

@@ -29,11 +29,16 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 use: sassLoaders
+            },
+            {
+                test: /\.jpg/,
+                exclude: /node_modules/,
+                use: 'file-loader'
             }
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.scss', '.ttf'],
+        extensions: ['.js', '.jsx', '.scss', '.ttf', '.jpg'],
         alias: {
             assets: path.join(__dirname, 'src/assets')
         }
@@ -47,5 +52,5 @@ module.exports = {
             chunkFilename: isDevelopment ? 'id.css' : '[id].[hash].css'
         })
     ],
-    devtool: 'eval-cheap-source-map'
+    devtool: 'source-map'
 };

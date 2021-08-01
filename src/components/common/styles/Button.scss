@@ -1,0 +1,25 @@
+@import '../../../Vars.scss';
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 15px 10px 0;
+    border: 2px solid black;
+
+    &.dark {
+        color: white;
+        background-color: black;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    span {
+        text-align: center;
+        padding: 14px 28px;
+        font-family: $fontfamily-bold;
+        font-size: 18px;
+    }
+}

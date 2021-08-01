@@ -6,7 +6,6 @@ import { Header } from '../components';
 import { ProductDetails } from '../components/product';
 import { Navigation, SessionDetails } from '../components/navigation';
 import './styles/Product';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Product() {
     return (
@@ -14,14 +13,13 @@ export default function Product() {
             <Header>
                 <Container>
                     <Row>
-                        <Col xs={5}>
+                        <Col xl={5}>
                             <Navigation />
                         </Col>
-                        <Col className="logo" xs={2}>
-                            <FontAwesomeIcon icon="air-freshener" className="logo-icon" />
+                        <Col className="logo" xl={2}>
                             <div className="brand-name">Essence</div>
                         </Col>
-                        <Col xs={5}>
+                        <Col xl={5}>
                             <SessionDetails />
                         </Col>
                     </Row>

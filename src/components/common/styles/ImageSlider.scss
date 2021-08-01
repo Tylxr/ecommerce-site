@@ -1,0 +1,58 @@
+@import '../../../Vars.scss';
+
+.image-slider {
+    display: flex;
+    flex-direction: row;
+
+    .main-image-container {
+        height: 500px;
+        flex: 7;
+        margin-right: $standard-spacing;
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .thumbnail-container {
+        flex: 2;
+        height: 500px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .thumbnail {
+            margin: 15px 0;
+    
+            &:first-child {
+                margin-top: 0;
+            }
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+                .thumbnail-image {
+                    border: 2px solid $colour-highlight;
+                }
+            }
+    
+            .thumbnail-image {
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+                border: 2px solid transparent;
+    
+                &.active {
+                    border: 2px solid black;
+                }
+            }
+        }
+    }
+}
