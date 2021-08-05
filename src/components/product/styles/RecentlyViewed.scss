@@ -1,6 +1,11 @@
 @import '../../../Vars.scss';
 
 .recently-viewed {
+    height: 265px;
+    width: 576px;
+    position: relative;
+    overflow: hidden;
+    
     .top {
         display: flex;
         flex-direction: row;
@@ -47,16 +52,32 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        position: absolute;
+        overflow: hidden;
+        top: 66px;
+        left: 0;
+        transition: left .5s ease;
 
         .recently-viewed-product {
-            width: 28%;
+            min-width: 160px;
+            max-width: 160px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: 0 7px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             .image-container {
                 height: 160px;
+                width: 100%;
                 overflow: hidden;
 
                 img {
