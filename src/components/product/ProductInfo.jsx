@@ -17,7 +17,7 @@ export default function ProductInfo() {
             <p className="description">The amped-up gel-cream texture feels both weightless and replenishing. It soothes and renews skin, and helps smooth out the look of lines. Leaves skin soft, smooth and bursting with bright radiance.</p>
             <span className="price">£38.99</span>
             <div className="review-container">
-                <Rating value={3.5} />
+                <Rating value={3.4} />
                 <a href="#" className="reviews" onClick={e => e.preventDefault()}>394 Reviews</a>
             </div>
             <p className="disclaimer">Disclaimer: dispatched within 1 week.</p>
