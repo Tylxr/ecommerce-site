@@ -40,14 +40,15 @@ export default function RecentlyViewed() {
     ];
 
     const [pos, setPos] = useState(0);
-    const [endOfSlideLeft, setEndOfSlideLeft] = useState(images.length > 0);
-    const [endOfSlideRight, setEndOfSlideRight] = useState(false);
+    const [endOfSlideLeft, setEndOfSlideLeft] = useState(true);
+    const [endOfSlideRight, setEndOfSlideRight] = useState(true);
     const [containerWidth, setContainerWidth] = useState(0);
     const [productsWidth, setProductsWidth] = useState(0);
 
     useEffect(() => {
         setContainerWidth(containerElem.current.offsetWidth);
         setProductsWidth(productsElem.current.offsetWidth);
+        setEndOfSlideRight(containerElem.current.offsetWidth > productsElem.current.offsetWidth);
     }, []);
 
     const changeDir = direction => {

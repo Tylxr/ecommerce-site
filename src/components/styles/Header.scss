@@ -29,3 +29,26 @@
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+
+        .brand {
+            order: 1;
+            .logo {
+                .brand-name {
+                    margin-bottom: -10px;
+                }
+            }
+        }
+        .links {
+            margin: 24px 0;
+            order: 2;
+        }
+        .session {
+            margin: 12px 0;
+            order: 3;
+        }
+    }
+}

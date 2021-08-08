@@ -4,15 +4,23 @@
     display: flex;
     flex-direction: row;
 
-    .product-media {
+    .product-media, .product-info {
         flex: 1;
-        box-sizing: border-box;
         margin: 0 $standard-spacing;
     }
+}
 
-    .product-info {
-        flex: 1;
-        box-sizing: border-box;
-        margin: 0 $standard-spacing;
+@media only screen and (max-width: 1024px) {
+    .product-details {
+        margin: 0 12px;
+        flex-direction: column;
+
+        .product-media {
+            margin: 0;
+        }
+
+        .product-info {
+            margin: 12px 0;
+        }
     }
 }

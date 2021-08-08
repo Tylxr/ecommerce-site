@@ -1,7 +1,28 @@
 @import '../../../Vars.scss';
 
 .product-media {
+    width: 100%;
+
+    .image-slider-container {
+        width: 100%;
+    }
     .recently-viewed-container {
+        width: 100%;
         margin-top: 24px;
+    }
+}
+
+.product-media-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .product-media {
+        .recently-viewed-container {
+            display: none;
+        }
+    }
+    .product-media-mobile {
+        display: block;
     }
 }

@@ -20,8 +20,8 @@ export default function ImageSlider() {
 
     return (
         <div className="image-slider">
-            <Modal show={imageModalState} onHide={() => setImageModalState(false)}>
-                <img src={productOneAsArray[imageIndex]} alt="Large Product Image" />
+            <Modal centered={true} dialogClassName="image-modal-dialog" show={imageModalState} onHide={() => setImageModalState(false)}>
+                <img className="modal-image" src={productOneAsArray[imageIndex]} alt="Large Product Image" />
             </Modal>
             <div className="main-image-container">
                 <img src={productOneAsArray[imageIndex]} onClick={() => setImageModalState(true)} alt="Product Image" className="main-image" />

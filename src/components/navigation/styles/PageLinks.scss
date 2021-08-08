@@ -19,3 +19,16 @@
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .page-links {
+        margin: 0;
+        justify-content: center;
+        
+        span {
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
