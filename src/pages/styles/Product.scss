@@ -3,6 +3,14 @@
 .product {
     width: $page-width;
     margin: 0 auto 80px auto;
+    filter: none;
+    -webkit-filter: none;
+
+    &.blur {
+        filter: blur(4px) grayscale(1);
+        -webkit-filter: blur(4px) grayscale(1);
+        transition: all 200ms linear;
+    }
 }
 
 @media only screen and (max-width: 1200px) {

@@ -22,7 +22,7 @@ export default function ProductInfo() {
             </div>
             <p className="disclaimer">Disclaimer: dispatched within 1 week.</p>
             <div className="buttons-container">
-                <Button text="Buy now" style="light" />
+                <Button text="Buy one" style="light" />
                 <Button text="Add to basket" style="dark" />
             </div>
             <div className="details-container">

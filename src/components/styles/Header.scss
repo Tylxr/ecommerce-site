@@ -27,6 +27,17 @@
             font-size: 60px;
             font-family: $fontfamily-fancy;
         }
+
+        .brand-transition-appear {
+            transform: scale(0.8);
+            opacity: 0;
+
+            &.brand-transition-appear-active {
+                transform: scale(1);
+                opacity: 1;
+                transition: all 750ms ease-out;
+            }
+        }
     }
 }
 

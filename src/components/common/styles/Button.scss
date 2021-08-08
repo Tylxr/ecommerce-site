@@ -2,14 +2,48 @@
 
 .button-container {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     margin: $standard-spacing $standard-spacing $standard-spacing 0;
     border: 2px solid black;
+    
+    &.light {
+        color: black;
+        background-color: white;
 
+        &:hover {
+            background-color: transparent;
+            transition: color 150ms linear;
+            color: white;
+        }
+          
+        &:before {
+            content: "";
+            position: absolute;
+            background-color: black;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 100%;
+            z-index: -1;
+            transition: top 150ms ease-out;
+            -webkit-transition: top 150ms ease-out;
+        }
+          
+        &:hover:before {
+            top: 0;
+        }
+    }
     &.dark {
         color: white;
         background-color: black;
+
+        &:hover {
+            background-color: white;
+            transition: all 150ms linear;
+            color: black;
+        }
     }
 
     &:hover {
