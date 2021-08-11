@@ -2,8 +2,13 @@ import React from 'react';
 import './styles/Button';
 
 export default function Button({text, style}) {
+
+    const test = () => {
+        alert('test')
+    };
+
     return (
-        <div className={`button-container ${style}`}>
+        <div className={`button-container ${style}`} onClick={() => test()}>
             <span>{text}</span>
         </div>
     )
