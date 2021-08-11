@@ -16,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.js|\.jsx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -31,7 +31,7 @@ module.exports = {
                 use: sassLoaders
             },
             {
-                test: /\.jpg/,
+                test: /\.jpg$/,
                 exclude: /node_modules/,
                 use: 'file-loader'
             }
@@ -39,6 +39,7 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.scss', '.ttf', '.jpg'],
+        modules: ['node_modules'],
         alias: {
             assets: path.join(__dirname, 'src/assets')
         }
