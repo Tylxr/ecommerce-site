@@ -1,8 +1,14 @@
+import productJson from '../products';
+
+//'Randomly' pick a product to load with
+const initialProductIndex = Math.floor(Math.random() * productJson.length);
+const selectedProduct = productJson.splice(initialProductIndex, 1);
 const INITIAL_STATE = {
-    products: []
+    products: productJson,
+    selectedProduct
 };
 
-const shopReducer = (state = INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action) => {
     // switch (action.type) {
     //     case "test":
     //         return {
@@ -19,5 +25,3 @@ const shopReducer = (state = INITIAL_STATE, action) => {
 
     return state;
 };
-
-export default shopReducer;

@@ -38,7 +38,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.scss', '.ttf', '.jpg'],
+        extensions: ['.js', '.jsx', '.json', '.scss', '.ttf', '.jpg'],
         modules: ['node_modules'],
         alias: {
             assets: path.join(__dirname, 'src/assets')

@@ -1,0 +1,17 @@
+[
+    {
+        "_id": "insert id here",
+        "MediaCollection" : "insert image folder name here",
+        "Name": "Necessaire",
+        "Description": [
+            "Insert as many descriptions in here as you like."
+        ],
+        "Price": 38.99,
+        "PriceFormatted": "£38.99",
+        "Rating": {
+            "Score": 4.3,
+            "ReviewCount": 291
+        },
+        "Disclaimer": "/// can be null | Dispatched within 1 week.///"
+    }
+]
