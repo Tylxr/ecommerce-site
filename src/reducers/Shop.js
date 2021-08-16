@@ -5,7 +5,8 @@ const initialProductIndex = Math.floor(Math.random() * productJson.length);
 const selectedProduct = productJson.splice(initialProductIndex, 1)[0];
 const INITIAL_STATE = {
     products: productJson,
-    selectedProduct
+    selectedProduct,
+    recentlyViewedIds: productJson.map(x => x._id)
 };
 
 export default (state = INITIAL_STATE, action) => {

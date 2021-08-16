@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import productOneAsArray from 'assets/images/products/replenish';
 import './styles/ImageSlider';
 
-export default function ImageSlider() {
+export default function ImageSlider({product}) {
 
     const [imageIndex, setImageIndex] = useState(0);
     const [imageModalState, setImageModalState] = useState(false);

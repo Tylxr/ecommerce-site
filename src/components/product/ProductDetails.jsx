@@ -1,13 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { ProductMedia, ProductInfo } from '.';
 import './styles/ProductDetails';
 
-//! Temporary
-import { useSelector } from 'react-redux';
-
 export default function ProductDetails() {
-
     const product = useSelector(({Shop}) => Shop.selectedProduct);
 
     return (
@@ -19,9 +16,9 @@ export default function ProductDetails() {
                 timeout={3000}
                 classNames="fade">
                 <div className="product-details">
-                    <ProductMedia />
+                    <ProductMedia product={product} />
                     <ProductInfo product={product} />
-                    <ProductMedia mobile={true} />
+                    <ProductMedia mobile={true} product={product} />
                 </div>
             </CSSTransition>
         </TransitionGroup>

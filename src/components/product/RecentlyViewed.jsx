@@ -1,49 +1,35 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import './styles/RecentlyViewed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import productOne from '../../assets/images/products/replenish';
-import productTwo from '../../assets/images/products/enhance';
-import productThree from '../../assets/images/products/elixir';
-import productFour from '../../assets/images/products/nourish';
-import productFive from '../../assets/images/products/hydrate';
+import images from 'assets/images/products';
 
 export default function RecentlyViewed() {
     const containerElem = useRef();
     const productsElem = useRef();
-
-    const images = [
-        {
-            src: productOne[0],
-            title: 'Enhance',
-            priceString: '£39.99'
-        },
-        {
-            src: productTwo[0],
-            title: 'Elixir',
-            priceString: '£38.99'
-        },
-        {
-            src: productThree[0],
-            title: 'Nourish',
-            priceString: '£27.99'
-        },
-        {
-            src: productFour[0],
-            title: 'Hydrator',
-            priceString: '£41.99'
-        },
-        {
-            src: productFive[0],
-            title: 'Replenish',
-            priceString: '£44.99'
-        }
-    ];
 
     const [pos, setPos] = useState(0);
     const [endOfSlideLeft, setEndOfSlideLeft] = useState(true);
     const [endOfSlideRight, setEndOfSlideRight] = useState(true);
     const [containerWidth, setContainerWidth] = useState(0);
     const [productsWidth, setProductsWidth] = useState(0);
+
+    const [products, recentlyViewedIds] = useSelector(({Shop}) => [Shop.products, Shop.recentlyViewedIds]);
+    const recentlyViewed = recentlyViewedIds.reduce((acc, val) => {
+        const currentProduct = products.find(x => x._id === val);
+        debugger;
+
+        acc.push({
+            _id: currentProduct._id,
+            src: images[currentProduct.MediaCollection]?.[0],
+            title: currentProduct.Name,
+            price: currentProduct.PriceFormatted
+        });
+
+        return acc;
+    }, []);
+
+    debugger;
 
     useEffect(() => {
         setContainerWidth(containerElem.current.offsetWidth);
@@ -87,15 +73,15 @@ export default function RecentlyViewed() {
                 </div>
             </div>
             <div className="products-container" ref={productsElem} style={{left: pos}}>
-                {images.map((image, idx) => {
+                {recentlyViewed.map((rv) => {
                     return (
-                        <div key={idx} className="recently-viewed-product">
+                        <div key={rv._id} className="recently-viewed-product">
                             <div className="image-container">
-                                <img src={image.src} alt="Product Image" />
+                                <img src={rv.src} alt="Product Image" />
                             </div>
                             <div className="details">
-                                <span>{image.title}</span>
-                                <span>{image.priceString}</span>
+                                <span>{rv.title}</span>
+                                <span>{rv.price}</span>
                             </div>
                         </div>
                     )
