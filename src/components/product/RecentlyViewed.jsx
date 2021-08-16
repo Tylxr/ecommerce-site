@@ -13,29 +13,32 @@ export default function RecentlyViewed() {
     const [endOfSlideRight, setEndOfSlideRight] = useState(true);
     const [containerWidth, setContainerWidth] = useState(0);
     const [productsWidth, setProductsWidth] = useState(0);
+    const [recentlyViewed, setRecentlyViewed] = useState([]);
 
     const [products, recentlyViewedIds] = useSelector(({Shop}) => [Shop.products, Shop.recentlyViewedIds]);
-    const recentlyViewed = recentlyViewedIds.reduce((acc, val) => {
-        const currentProduct = products.find(x => x._id === val);
-        debugger;
 
-        acc.push({
-            _id: currentProduct._id,
-            src: images[currentProduct.MediaCollection]?.[0],
-            title: currentProduct.Name,
-            price: currentProduct.PriceFormatted
-        });
+    useEffect(() => {
+        const recentlyViewed = recentlyViewedIds.reduce((acc, val) => {
+            const currentProduct = products.find(x => x._id === val);
+    
+            acc.push({
+                _id: currentProduct._id,
+                src: images[currentProduct.MediaCollection]?.[0],
+                title: currentProduct.Name,
+                price: currentProduct.PriceFormatted
+            });
+    
+            return acc;
+        }, []);
 
-        return acc;
+        setRecentlyViewed(recentlyViewed);
     }, []);
-
-    debugger;
 
     useEffect(() => {
         setContainerWidth(containerElem.current.offsetWidth);
         setProductsWidth(productsElem.current.offsetWidth);
         setEndOfSlideRight(containerElem.current.offsetWidth > productsElem.current.offsetWidth);
-    }, []);
+    }, [recentlyViewed]); //Depend on recentlyViewed so that when the list changes, the slider indicators adjust
 
     const changeDir = direction => {
         let amount = pos;
