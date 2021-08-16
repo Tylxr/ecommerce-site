@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
-import {productOneAsArray} from 'assets/images/products/replenish';
+import productOneAsArray from 'assets/images/products/replenish';
 import './styles/ImageSlider';
 
 export default function ImageSlider() {

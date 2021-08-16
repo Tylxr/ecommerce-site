@@ -13,27 +13,27 @@ export default function RecentlyViewed() {
 
     const images = [
         {
-            src: productOne.productOne1,
+            src: productOne[0],
             title: 'Enhance',
             priceString: '£39.99'
         },
         {
-            src: productTwo.productTwo1,
+            src: productTwo[0],
             title: 'Elixir',
             priceString: '£38.99'
         },
         {
-            src: productThree.productThree1,
+            src: productThree[0],
             title: 'Nourish',
             priceString: '£27.99'
         },
         {
-            src: productFour.productFour1,
+            src: productFour[0],
             title: 'Hydrator',
             priceString: '£41.99'
         },
         {
-            src: productFive.productFive1,
+            src: productFive[0],
             title: 'Replenish',
             priceString: '£44.99'
         }
