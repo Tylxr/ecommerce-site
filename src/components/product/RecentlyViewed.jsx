@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './styles/RecentlyViewed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import productOne from '../../assets/images/products/1';
-import productTwo from '../../assets/images/products/2';
-import productThree from '../../assets/images/products/3';
-import productFour from '../../assets/images/products/4';
-import productFive from '../../assets/images/products/5';
+import productOne from '../../assets/images/products/replenish';
+import productTwo from '../../assets/images/products/enhance';
+import productThree from '../../assets/images/products/elixir';
+import productFour from '../../assets/images/products/nourish';
+import productFive from '../../assets/images/products/hydrate';
 
 export default function RecentlyViewed() {
     const containerElem = useRef();

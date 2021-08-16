@@ -3,24 +3,27 @@ import React from 'react';
 import { Rating, Button } from '../common';
 import './styles/ProductInfo';
 
-export default function ProductInfo() {
+export default function ProductInfo({product}) {
     return (
         <div className="product-info">
             <div className="product-heading-container">
-                <h3>Necessaire</h3>
+                <h3>{product.Name}</h3>
                 <div className="favourite-button favourited">
                     {/* <FontAwesomeIcon icon={["far", "heart"]} /> */}
                     <FontAwesomeIcon icon={["fas", "heart"]} />
                 </div>
             </div>
-            <p className="description">A power-packed serum for youthful, bright skin. It delivers a highly concentrated dose of moisturising elements, beautifully restoring your skin’s bright glow and youthful vitality.</p>
-            <p className="description">The amped-up gel-cream texture feels both weightless and replenishing. It soothes and renews skin, and helps smooth out the look of lines. Leaves skin soft, smooth and bursting with bright radiance.</p>
-            <span className="price">£38.99</span>
+            {product.Description.map((desc, idx) => {
+                return <p key={idx} className="description">{desc}</p>   
+            })}
+            <span className="price">{product.PriceFormatted}</span>
             <div className="review-container">
-                <Rating value={3.4} />
-                <a href="#" className="reviews" onClick={e => e.preventDefault()}>394 Reviews</a>
+                <Rating value={product.Rating.Score} />
+                <a href="#" className="reviews" onClick={e => e.preventDefault()}>{product.Rating.ReviewCount} Reviews</a>
             </div>
-            <p className="disclaimer">Disclaimer: dispatched within 1 week.</p>
+            {product.Disclaimer && (
+                <p className="disclaimer">Disclaimer: {product.Disclaimer}</p>
+            )}
             <div className="buttons-container">
                 <Button text="Quick buy" style="light" />
                 <Button text="Add to basket" style="dark" />
