@@ -11,7 +11,7 @@ export default function ImageSlider({product}) {
 
     useEffect(() => {
         setImageCollection(images[product.MediaCollection]);
-    }, []);
+    }, [product]);
 
     const changeImage = index => {
         setImageIndex(index);

@@ -4,7 +4,7 @@ import './styles/RecentlyViewed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import images from 'assets/images/products';
 
-export default function RecentlyViewed() {
+export default function RecentlyViewed({onClick}) {
     const containerElem = useRef();
     const productsElem = useRef();
 
@@ -78,7 +78,7 @@ export default function RecentlyViewed() {
             <div className="products-container" ref={productsElem} style={{left: pos}}>
                 {recentlyViewed.map((rv) => {
                     return (
-                        <div key={rv._id} className="recently-viewed-product">
+                        <div key={rv._id} className="recently-viewed-product" onClick={() => onClick(rv._id)}>
                             <div className="image-container">
                                 <img src={rv.src} alt="Product Image" />
                             </div>

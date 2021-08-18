@@ -1,0 +1,1 @@
+export const CHANGE_PRODUCT = "change_product";

@@ -1,9 +1,16 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { ImageSlider } from '../common';
+import { CHANGE_PRODUCT } from '../../reducers/types';
 import { RecentlyViewed } from '.';
 import './styles/ProductMedia';
 
 export default function ProductMedia({mobile, product}) {
+    const dispatch = useDispatch();
+    const onClick = productId => {
+        dispatch({type: CHANGE_PRODUCT, payload: productId});
+    };
+
     if (mobile) {
         return <div className="product-media-mobile">
             <RecentlyViewed />
@@ -15,7 +22,7 @@ export default function ProductMedia({mobile, product}) {
                     <ImageSlider product={product} />
                 </div>
                 <div className="recently-viewed-container">
-                    <RecentlyViewed />
+                    <RecentlyViewed onClick={onClick} />
                 </div>
             </div>
         )

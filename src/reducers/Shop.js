@@ -1,28 +1,27 @@
 import productJson from '../products';
+import { CHANGE_PRODUCT } from './types';
 
 //'Randomly' pick a product to load with
 const initialProductIndex = Math.floor(Math.random() * productJson.length);
-const selectedProduct = productJson.splice(initialProductIndex, 1)[0];
+const remainingProducts = [...productJson];
+const selectedProduct = remainingProducts.splice(initialProductIndex, 1)[0];
 const INITIAL_STATE = {
-    products: productJson,
+    products: remainingProducts,
     selectedProduct,
-    recentlyViewedIds: productJson.map(x => x._id)
+    recentlyViewedIds: remainingProducts.map(x => x._id)
 };
 
 export default (state = INITIAL_STATE, action) => {
-    // switch (action.type) {
-    //     case "test":
-    //         return {
-    //             ...state,
-    //             products: [
-    //                 {
-    //                     a: 1
-    //                 }
-    //             ]
-    //         }
-    //     default:
-    //         return state;
-    // }
+    switch (action.type) {
+        case CHANGE_PRODUCT:
+            debugger;
+            return {
+                ...state,
+                products: productJson.filter(x => x._id !== action.payload),
+                selectedProduct: productJson.find(x => x._id === action.payload)
+            };
+        default:
+            return state;
+    }
 
-    return state;
 };
