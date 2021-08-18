@@ -32,7 +32,7 @@ export default function RecentlyViewed({onClick}) {
         }, []);
 
         setRecentlyViewed(recentlyViewed);
-    }, []);
+    }, [recentlyViewedIds]);
 
     useEffect(() => {
         setContainerWidth(containerElem.current.offsetWidth);

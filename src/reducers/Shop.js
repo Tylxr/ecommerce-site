@@ -14,11 +14,11 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case CHANGE_PRODUCT:
-            debugger;
             return {
                 ...state,
                 products: productJson.filter(x => x._id !== action.payload),
-                selectedProduct: productJson.find(x => x._id === action.payload)
+                selectedProduct: productJson.find(x => x._id === action.payload),
+                recentlyViewedIds: [state.selectedProduct._id, ...state.recentlyViewedIds.filter(x => x !== action.payload)]
             };
         default:
             return state;
