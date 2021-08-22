@@ -10,7 +10,6 @@ export default function ProductDetails() {
     return (
         <TransitionGroup>
             <CSSTransition
-                key={1} //TODO: Provide key - product key from redux
                 in={true}
                 appear={true}
                 timeout={3000}

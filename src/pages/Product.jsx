@@ -1,12 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Header } from '../components';
 import { ProductDetails } from '../components/product';
 import './styles/Product';
 
 export default function Product() {
-    //TODO: Apply blur class to product with Redux on modal shown
+    const showProductModal = useSelector(({Shop}) => Shop.showProductModal);
     return (
-        <div className="product">
+        <div className={`product ${showProductModal ? 'blur' : ''}`}>
             <Header />
             <ProductDetails />
         </div>
