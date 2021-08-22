@@ -13,7 +13,7 @@ export default function ProductMedia({mobile, product}) {
 
     if (mobile) {
         return <div className="product-media-mobile">
-            <RecentlyViewed />
+            <RecentlyViewed onClick={onClick} />
         </div>
     } else {
         return (
